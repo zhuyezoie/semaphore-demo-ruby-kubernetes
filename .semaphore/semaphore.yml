@@ -12,3 +12,18 @@ blocks:
           commands:
             - checkout
             - docker build -t your-image .
+  - name: 'Block #2'
+    task:
+      jobs:
+        - name: 'Job #1'
+          commands:
+            - echo "aaaaaaaa"
+        - name: 'Job #2'
+          commands:
+            - echo "bbbbbb"
+  - name: 'Block #3'
+    task:
+      jobs:
+        - name: 'Job #1'
+          commands:
+            - echo "33333"
